@@ -15,11 +15,19 @@ function updateCountdown() {
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    // Countdown has ended
+    // Countdown has ended - update both main and banner countdowns
     document.getElementById('days').textContent = '0';
     document.getElementById('hours').textContent = '0';
     document.getElementById('minutes').textContent = '0';
     document.getElementById('seconds').textContent = '0';
+
+    // Update banner countdown
+    if (document.getElementById('banner-days')) {
+      document.getElementById('banner-days').textContent = '0';
+      document.getElementById('banner-hours').textContent = '0';
+      document.getElementById('banner-minutes').textContent = '0';
+      document.getElementById('banner-seconds').textContent = '0';
+    }
     return;
   }
 
@@ -29,11 +37,19 @@ function updateCountdown() {
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  // Update the DOM
+  // Update the main countdown (pricing section)
   document.getElementById('days').textContent = days;
   document.getElementById('hours').textContent = hours;
   document.getElementById('minutes').textContent = minutes;
   document.getElementById('seconds').textContent = seconds;
+
+  // Update the banner countdown
+  if (document.getElementById('banner-days')) {
+    document.getElementById('banner-days').textContent = days;
+    document.getElementById('banner-hours').textContent = hours;
+    document.getElementById('banner-minutes').textContent = minutes;
+    document.getElementById('banner-seconds').textContent = seconds;
+  }
 }
 
 // Update countdown immediately

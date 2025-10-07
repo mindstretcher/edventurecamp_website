@@ -6,17 +6,67 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
+  scroll-padding-top: 90px;
 }
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* Countdown Banner */
+.countdown-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #596E30;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 20px;
+  z-index: 1001;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.countdown-banner-text {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.countdown-banner-timer {
+  display: flex;
+  gap: 10px;
+}
+
+.countdown-banner-timer>span {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.countdown-banner-timer>span>span:first-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.countdown-banner-timer>span>span:last-child {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
-  top: 0;
+  top: 40px;
   left: 0;
   right: 0;
   background-color: white;
@@ -123,7 +173,7 @@ body {
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-start;
-  padding: 160px 80px 0 80px;
+  padding: 180px 80px 0 80px;
 }
 
 .hero-content {
@@ -581,8 +631,32 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .countdown-banner {
+    font-size: 10px;
+    padding: 6px 12px;
+    gap: 8px;
+  }
+
+  .countdown-banner-timer {
+    gap: 6px;
+  }
+
+  .countdown-banner-timer>span {
+    padding: 3px 7px;
+    gap: 3px;
+  }
+
+  .countdown-banner-timer>span>span:first-child {
+    font-size: 13px;
+  }
+
+  .countdown-banner-timer>span>span:last-child {
+    font-size: 9px;
+  }
+
   .navbar {
     padding: 16px 24px;
+    top: 44px;
   }
 
   .logo {
@@ -598,7 +672,7 @@ body {
   }
 
   .hero {
-    padding: 120px 24px 0 24px;
+    padding: 155px 24px 0 24px;
   }
 
   .hero-image {
@@ -2138,6 +2212,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -2147,6 +2222,7 @@ body {
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }

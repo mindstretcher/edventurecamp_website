@@ -4,6 +4,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://www.edventure.asia/sitemap.xml
-
-# Crawl delay (optional, adjust if needed)
-Crawl-delay: 1
