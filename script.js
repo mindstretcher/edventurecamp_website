@@ -43,3 +43,69 @@ hamburger.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
   hamburger.classList.toggle('active');
 });
+
+// Age Group Filter for Camp Details
+document.addEventListener('DOMContentLoaded', () => {
+  const agePills = document.querySelectorAll('.age-pill');
+  const dateCards = document.querySelectorAll('.date-card');
+
+  // Initialize with P1-P3 selected by default
+  const defaultGroup = 'p1-p3';
+  dateCards.forEach(card => {
+    const cardGroup = card.getAttribute('data-group');
+    if (cardGroup !== defaultGroup) {
+      card.classList.add('dimmed');
+    }
+  });
+
+  agePills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const selectedGroup = pill.getAttribute('data-group');
+
+      // Update active pill
+      agePills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      // Filter date cards
+      dateCards.forEach(card => {
+        const cardGroup = card.getAttribute('data-group');
+        if (cardGroup === selectedGroup) {
+          card.classList.remove('dimmed');
+        } else {
+          card.classList.add('dimmed');
+        }
+      });
+    });
+  });
+
+  // Testimonials Infinite Scroll
+  const testimonialTracks = document.querySelectorAll('.testimonials-track');
+
+  testimonialTracks.forEach(track => {
+    // Clone the content to create seamless loop
+    const items = track.innerHTML;
+    track.innerHTML = items + items;
+  });
+
+  // FAQ Accordion
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isActive = faqItem.classList.contains('active');
+
+      // Close all FAQ items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      // Open clicked item if it wasn't already active
+      if (!isActive) {
+        faqItem.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+});
