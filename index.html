@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edventure Camp 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <svg style="display: none;">
+      <symbol id="whatsapp-icon" viewBox="0 0 24 24">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+      </symbol>
+    </svg>
+    <nav class="navbar">
+      <div class="navbar-logos">
+        <img src="static/img/edventure_camp_logo.png" alt="Edventure Camp"
+          class="logo edventure-logo">
+        <img src="static/img/mindstretcher_logo.png" alt="Mind Stretcher"
+          class="logo mindstretcher-logo">
+      </div>
+      <div class="navbar-links">
+        <a href="#program">Program</a>
+        <a href="#details">Details</a>
+        <a href="#testimonies">Testimonies</a>
+        <a href="#about">About Us</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="#" class="btn btn-primary navbar-btn navbar-btn-desktop">
+        <svg class="whatsapp-icon" fill="white">
+          <use href="#whatsapp-icon"></use>
+        </svg>
+        Speak With Us
+      </a>
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu">
+      <a href="#program">Program</a>
+      <a href="#details">Details</a>
+      <a href="#testimonies">Testimonies</a>
+      <a href="#about">About Us</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Awaken Your Child's<br>Spirit of Edventure<br>This Holiday</h1>
+        <p>An unforgettable holiday experience to nurture confidence, <br>friendships and a
+          spirit of curiosity.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">
+            <svg class="whatsapp-icon" fill="white">
+              <use href="#whatsapp-icon"></use>
+            </svg>
+            Find Out More!
+          </a>
+          <a href="#" class="btn btn-secondary">Reserve Your Spot</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="static/img/hero_mobile.png" alt="Edventure Camp 2025">
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="pricing-container">
+        <div class="price-card standard">
+          <p class="price-label">Standard price</p>
+          <p class="price-amount">$1,650</p>
+        </div>
+
+        <div class="price-card early-bird">
+          <p class="early-bird-label">Early bird price</p>
+          <p class="early-bird-amount">$1,480</p>
+          <p class="early-bird-deadline">Until 19 October 2025</p>
+          <div class="countdown">
+            <div class="countdown-item">
+              <span class="countdown-number" id="days">24</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="hours">11</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="minutes">44</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="seconds">30</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-reserve">
+            Reserve Your Spot Now
+            <img src="static/img/fire_icon.png" alt="Fire" class="fire-icon">
+          </a>
+        </div>
+
+        <div class="price-card cta">
+          <img src="static/img/price_tag.png" alt="Price Tag" class="price-tag-icon">
+          <p class="cta-title">Don't Miss Out!</p>
+          <p class="cta-subtitle">Have a question for us?</p>
+          <a href="#" class="btn btn-cta">
+            <svg class="whatsapp-icon" fill="white">
+              <use href="#whatsapp-icon"></use>
+            </svg>
+            Speak With Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="unique-section">
+      <div class="unique-header">
+        <h2>What Makes Edventure Camp <span class="unique-word">Unique<img
+              src="static/img/underline.png" alt="" class="underline-img"></span><img
+            src="static/img/sparkle.png" alt="" class="sparkle-img"></h2>
+      </div>
+      <p class="unique-subtitle">At Edventure Camp, children not only learn but create, explore and
+        grow.</p>
+
+      <div class="unique-features">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="static/img/diamond.png" alt="Diamond">
+          </div>
+          <h3>Low student-to-coach ratio</h3>
+          <p>Close guidance:<br>
+            <6 students per coach</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="static/img/book.png" alt="Book">
+          </div>
+          <h3>Distinctive, expert-led workshops</h3>
+          <p>Hands-on sessions guided by experienced educators, facilitators and experts</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="static/img/umbrella.png" alt="Umbrella">
+          </div>
+          <h3>Peace of mind for working parents</h3>
+          <p>Full-day structure with safety and supervision parents can trust</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="static/img/sweets.png" alt="Sweets">
+          </div>
+          <h3>Fun, educational and enriching</h3>
+          <p>Designed to spark confidence and creativity with care beyond ordinary holiday care</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="#" class="floating-whatsapp" aria-label="Contact us on WhatsApp">
+      <svg class="whatsapp-icon" fill="white">
+        <use href="#whatsapp-icon"></use>
+      </svg>
+    </a>
+
+  </body>
+
+</html>
