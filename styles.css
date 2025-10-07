@@ -66,7 +66,7 @@ body {
 /* Navbar */
 .navbar {
   position: fixed;
-  top: 40px;
+  top: 36px;
   left: 0;
   right: 0;
   background-color: white;
@@ -656,7 +656,7 @@ body {
 
   .navbar {
     padding: 16px 24px;
-    top: 44px;
+    top: 32px;
   }
 
   .logo {
