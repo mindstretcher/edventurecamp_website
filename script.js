@@ -1,3 +1,10 @@
+// Google Analytics Event Tracking Helper
+function trackEvent(eventName, eventParams = {}) {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', eventName, eventParams);
+  }
+}
+
 // Countdown Timer
 function updateCountdown() {
   // Set target date to 19 October 2025 00:00:00 SGT (UTC+8)
@@ -62,6 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
     pill.addEventListener('click', () => {
       const selectedGroup = pill.getAttribute('data-group');
 
+      // Track age group selection
+      trackEvent('age_group_selected', {
+        event_category: 'engagement',
+        event_label: selectedGroup,
+        age_group: selectedGroup
+      });
+
       // Update active pill
       agePills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
@@ -94,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     question.addEventListener('click', () => {
       const faqItem = question.parentElement;
       const isActive = faqItem.classList.contains('active');
+      const questionText = question.querySelector('span').textContent;
 
       // Close all FAQ items
       document.querySelectorAll('.faq-item').forEach(item => {
@@ -105,6 +120,69 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isActive) {
         faqItem.classList.add('active');
         question.setAttribute('aria-expanded', 'true');
+
+        // Track FAQ interaction
+        trackEvent('faq_opened', {
+          event_category: 'engagement',
+          event_label: questionText,
+          question: questionText
+        });
+      }
+    });
+  });
+
+  // Track CTA button clicks
+  document.querySelectorAll('a[href*="reserve.html"]').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const buttonText = button.textContent.trim();
+      trackEvent('reserve_spot_clicked', {
+        event_category: 'conversion',
+        event_label: buttonText,
+        button_location: button.closest('section')?.className || 'unknown'
+      });
+    });
+  });
+
+  // Track WhatsApp button clicks
+  document.querySelectorAll('a[href*="wa.me"]').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const buttonText = button.textContent.trim();
+      trackEvent('whatsapp_clicked', {
+        event_category: 'conversion',
+        event_label: buttonText,
+        button_location: button.closest('section')?.className || button.className
+      });
+    });
+  });
+
+  // Track navigation clicks
+  document.querySelectorAll('.navbar-links a, .mobile-menu a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const linkText = link.textContent.trim();
+      const section = link.getAttribute('href');
+      trackEvent('navigation_clicked', {
+        event_category: 'engagement',
+        event_label: linkText,
+        destination: section
+      });
+    });
+  });
+
+  // Track scroll depth
+  let scrollDepths = [25, 50, 75, 100];
+  let trackedDepths = new Set();
+
+  window.addEventListener('scroll', () => {
+    const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+
+    scrollDepths.forEach(depth => {
+      if (scrollPercent >= depth && !trackedDepths.has(depth)) {
+        trackedDepths.add(depth);
+        trackEvent('scroll_depth', {
+          event_category: 'engagement',
+          event_label: `${depth}%`,
+          percent: depth
+        });
       }
     });
   });
