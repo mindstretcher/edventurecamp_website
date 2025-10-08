@@ -89,6 +89,10 @@ body {
   width: auto;
 }
 
+.mindstretcher-logo {
+  height: 38px;
+}
+
 .navbar-links {
   display: flex;
   gap: 40px;
@@ -186,7 +190,7 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 800;
   color: #596E30;
   line-height: 1.2;
@@ -661,6 +665,10 @@ body {
 
   .logo {
     height: 32px;
+  }
+
+  .mindstretcher-logo {
+    height: 26px;
   }
 
   .navbar-btn-desktop {
