@@ -89,6 +89,10 @@ body {
   width: auto;
 }
 
+.mindstretcher-logo {
+  height: 38px;
+}
+
 .navbar-links {
   display: flex;
   gap: 40px;
@@ -100,7 +104,7 @@ body {
 .navbar-links a {
   text-decoration: none;
   color: #596E30;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 16px;
   transition: opacity 0.3s ease;
 }
@@ -186,7 +190,7 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 800;
   color: #596E30;
   line-height: 1.2;
@@ -199,6 +203,7 @@ body {
   color: #8B8B8B;
   line-height: 1.6;
   margin-bottom: 40px;
+  max-width: 580px;
 }
 
 .hero-buttons {
@@ -565,7 +570,7 @@ body {
     height: auto;
     background-image: none;
     flex-direction: column;
-    padding: 100px 40px 0 40px;
+    padding: 140px 40px 0 40px;
   }
 
   .hero-content {
@@ -661,6 +666,10 @@ body {
 
   .logo {
     height: 32px;
+  }
+
+  .mindstretcher-logo {
+    height: 26px;
   }
 
   .navbar-btn-desktop {
