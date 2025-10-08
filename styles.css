@@ -104,7 +104,7 @@ body {
 .navbar-links a {
   text-decoration: none;
   color: #596E30;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 16px;
   transition: opacity 0.3s ease;
 }
@@ -203,6 +203,7 @@ body {
   color: #8B8B8B;
   line-height: 1.6;
   margin-bottom: 40px;
+  max-width: 580px;
 }
 
 .hero-buttons {
