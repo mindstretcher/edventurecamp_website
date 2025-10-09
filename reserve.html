@@ -125,6 +125,57 @@
       opacity: 0.7;
     }
 
+    .run-containers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .run-card {
+      background-color: #596E30;
+      color: white;
+      padding: 20px 24px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.5;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(89, 110, 48, 0.2);
+      text-decoration: none;
+      display: block;
+    }
+
+    .run-card:hover {
+      background-color: #4a5c27;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(89, 110, 48, 0.3);
+    }
+
+    .run-card:nth-child(2),
+    .run-card:nth-child(4) {
+      background-color: #7A9450;
+    }
+
+    .run-card:nth-child(2):hover,
+    .run-card:nth-child(4):hover {
+      background-color: #6A8340;
+    }
+
+    .run-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .run-details {
+      font-size: 15px;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+
     @media (max-width: 768px) {
       .container {
         padding: 40px 28px;
@@ -146,6 +197,17 @@
         padding: 16px 32px;
         font-size: 16px;
       }
+
+      .run-containers {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 24px 0;
+      }
+
+      .run-card {
+        padding: 18px 20px;
+        font-size: 15px;
+      }
     }
   </style>
 </head>
@@ -159,15 +221,27 @@
   </svg>
 
   <div class="container">
-    <h1>We'll be letting you book your slot soon</h1>
-    <p>Please WhatsApp us to secure your place on the waitlist first</p>
-    <a href="https://wa.me/6588838004?text=Hello!%20I'm%20interested%20in%20the%20Edventure%20Camp%202025" class="btn">
-      <svg class="whatsapp-icon" fill="white">
-        <use href="#whatsapp-icon"></use>
-      </svg>
-      WhatsApp Us Now
-    </a>
-    <br>
+    <h1>Choose your slots below</h1>
+
+    <div class="run-containers">
+      <a href="https://luma.com/mindstretcher-edventure-camp-2025-run-1" class="run-card">
+        <div class="run-title">Run 1</div>
+        <div class="run-details">24 Nov - 29 Nov | P1 - P3</div>
+      </a>
+      <a href="https://luma.com/mindstretcher-edventure-camp-2025-run-2" class="run-card">
+        <div class="run-title">Run 2</div>
+        <div class="run-details">1 - 5 Dec | P4 - P6</div>
+      </a>
+      <a href="https://luma.com/mindstretcher-edventure-camp-2025-run-3" class="run-card">
+        <div class="run-title">Run 3</div>
+        <div class="run-details">8 - 12 Dec | P1 - P3</div>
+      </a>
+      <a href="https://luma.com/mindstretcher-edventure-camp-2025-run-4" class="run-card">
+        <div class="run-title">Run 4</div>
+        <div class="run-details">15 - 19 Dec | P4 - P6</div>
+      </a>
+    </div>
+
     <a href="index.html" class="back-link">← Back to Home</a>
   </div>
 </body>
