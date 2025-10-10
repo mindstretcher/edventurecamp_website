@@ -171,7 +171,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('static/img/hero_background.png');
+  background-image: url('static/img/new_hero_background.png');
   background-size: 100% auto;
   background-position: center right;
   background-repeat: no-repeat;
@@ -573,24 +573,26 @@ body {
     height: auto;
     background-image: none;
     flex-direction: column;
-    padding: 140px 40px 0 40px;
+    padding: 140px 40px 40px 40px;
   }
 
   .hero-content {
     max-width: 100%;
+    margin-bottom: 32px;
   }
 
   .hero-image {
     display: block;
-    width: 100vw;
-    margin-left: -40px;
-    margin-top: 40px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .hero-image img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 20px;
   }
 
   .pricing {
@@ -684,11 +686,26 @@ body {
   }
 
   .hero {
-    padding: 155px 24px 0 24px;
+    padding: 155px 24px 24px 24px;
+    background-image: none;
+  }
+
+  .hero-content {
+    margin-bottom: 24px;
   }
 
   .hero-image {
-    margin-left: -24px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
   }
 
   .hero-content h1 {
