@@ -544,12 +544,8 @@ body {
   margin: 0;
 }
 
-/* Tablet Styles */
-@media (max-width: 1480px) {
-  .navbar {
-    padding: 16px 40px;
-  }
-
+/* Desktop Small Screens (1025px - 1280px) */
+@media (max-width: 1280px) {
   .navbar-links {
     display: none;
   }
@@ -564,6 +560,13 @@ body {
 
   .hamburger {
     display: flex;
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 16px 40px;
   }
 
   .hero {
