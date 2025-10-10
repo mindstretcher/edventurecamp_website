@@ -172,7 +172,7 @@ body {
   width: 100%;
   height: 100vh;
   background-image: url('static/img/hero_background.png');
-  background-size: contain;
+  background-size: 100% auto;
   background-position: center right;
   background-repeat: no-repeat;
   display: flex;
@@ -544,12 +544,8 @@ body {
   margin: 0;
 }
 
-/* Tablet Styles */
-@media (max-width: 1200px) {
-  .navbar {
-    padding: 16px 40px;
-  }
-
+/* Desktop Small Screens (1025px - 1280px) */
+@media (max-width: 1280px) {
   .navbar-links {
     display: none;
   }
@@ -564,6 +560,13 @@ body {
 
   .hamburger {
     display: flex;
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 16px 40px;
   }
 
   .hero {
@@ -2556,15 +2559,20 @@ body {
 }
 
 @keyframes jiggle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(-1deg);
   }
+
   50% {
     transform: rotate(1deg);
   }
+
   75% {
     transform: rotate(-0.5deg);
   }
