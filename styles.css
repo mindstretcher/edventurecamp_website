@@ -1318,6 +1318,46 @@ body {
   }
 }
 
+/* Video Section */
+.video-section {
+  padding: 80px;
+  background-color: white;
+}
+
+.video-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.camp-video {
+  width: 100%;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
+/* Video Section - Tablet */
+@media (max-width: 1200px) {
+  .video-section {
+    padding: 60px 40px;
+  }
+
+  .camp-video {
+    border-radius: 24px;
+  }
+}
+
+/* Video Section - Mobile */
+@media (max-width: 768px) {
+  .video-section {
+    padding: 40px 24px;
+  }
+
+  .camp-video {
+    border-radius: 20px;
+  }
+}
+
 /* Journey CTA Section */
 .journey-cta {
   padding: 80px;
