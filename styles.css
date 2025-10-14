@@ -82,6 +82,8 @@ body {
   display: flex;
   align-items: center;
   gap: 24px;
+  flex: 0 0 auto;
+  min-width: 220px;
 }
 
 .logo {
@@ -95,10 +97,10 @@ body {
 
 .navbar-links {
   display: flex;
-  gap: 40px;
+  gap: 32px;
   flex: 1;
   justify-content: center;
-  margin: 0 40px;
+  align-items: center;
 }
 
 .navbar-links a {
@@ -111,6 +113,15 @@ body {
 
 .navbar-links a:hover {
   opacity: 0.7;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex: 0 0 auto;
+  min-width: 380px;
+  justify-content: flex-end;
 }
 
 .navbar-btn {
@@ -144,16 +155,20 @@ body {
   background-color: white;
   flex-direction: column;
   padding: 24px;
-  gap: 20px;
+  padding-bottom: 32px;
+  gap: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .mobile-menu.active {
   display: flex;
 }
 
-.mobile-menu a {
+.mobile-menu > a:not(.mobile-menu-btn) {
   text-decoration: none;
   color: #596E30;
   font-weight: 600;
@@ -162,8 +177,49 @@ body {
   border-bottom: 1px solid #f0f0f0;
 }
 
-.mobile-menu a:last-child {
+.mobile-menu > a:nth-last-child(3) {
   border-bottom: none;
+  margin-bottom: 24px;
+}
+
+.mobile-menu-btn {
+  padding: 16px 24px !important;
+  width: 100%;
+  justify-content: center;
+  margin: 0 !important;
+  font-size: 16px !important;
+  min-height: 54px;
+  height: auto;
+  line-height: 1.5;
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  border-width: 2px !important;
+  border-style: solid !important;
+  flex-shrink: 0;
+}
+
+.mobile-menu-btn + .mobile-menu-btn {
+  margin-top: 12px !important;
+}
+
+.mobile-menu-btn.btn-secondary {
+  background-color: #FFFFFF;
+  color: #596E30;
+  border-color: #596E30;
+}
+
+.mobile-menu-btn.btn-primary {
+  background-color: #596E30;
+  color: white;
+  border-color: #596E30;
+}
+
+.mobile-menu-btn .whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 /* Hero Section */
@@ -774,7 +830,7 @@ body {
     display: none;
   }
 
-  .navbar-btn-desktop {
+  .navbar-buttons {
     display: none;
   }
 
@@ -891,6 +947,12 @@ body {
   .navbar {
     padding: 12px 24px;
     top: 32px;
+  }
+
+  .mobile-menu {
+    top: 98px;
+    max-height: calc(100vh - 98px);
+    padding-bottom: 40px;
   }
 
   .logo {
