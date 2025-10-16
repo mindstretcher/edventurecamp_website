@@ -494,10 +494,11 @@ body {
 }
 
 .price-gst {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 400;
   color: #939393;
   display: block;
+  margin-top: 4px;
 }
 
 .price-card.early-bird {
@@ -525,7 +526,8 @@ body {
 }
 
 .early-bird-amount .price-gst {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
 }
 
 .early-bird-deadline {
