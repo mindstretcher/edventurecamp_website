@@ -7,8 +7,8 @@ function trackEvent(eventName, eventParams = {}) {
 
 // Countdown Timer
 function updateCountdown() {
-  // Set target date to end of 31 October 2025 23:59:59 SGT (UTC+8)
-  const targetDate = new Date('2025-10-31T23:59:59+08:00');
+  // Set target date to end of 23 November 2025 23:59:59 SGT (UTC+8)
+  const targetDate = new Date('2025-11-23T23:59:59+08:00');
   const now = new Date();
 
   // Calculate time difference in milliseconds
